@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css"; 
 import Link from "next/link";
+import "./componentes/searchBar.js"
+import SearchBar from "./componentes/searchBar.js";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +29,8 @@ export default function RootLayout({ children }) {
       
           <Link href="/" className="hover:text-blue-400">Inicio</Link>
           <Link href="/catalogo" className="hover:text-blue-400">Ver Películas</Link>
+
+          <SearchBar />
         </nav>
         {children}
       </body>
